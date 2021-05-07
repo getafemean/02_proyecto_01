@@ -1,3 +1,10 @@
+/* Fuentes */
+
+@font-face {
+    font-family: "Avenir";
+    src: url('../fonts/Avenir-Book.ttf');
+}
+
 /* Reseteo */
 
 * {
@@ -6,7 +13,64 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Generales */
+
+body {
+    font-family: "Avenir", sans-serif;
+    color: #67666e;
+}
+
+
+/* Header */
+
+header {
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    background-color: white;
+}
+
+header.transparent {
+    background-color: transparent;
+}
+
+header img {
+    height: 60px;
+    width: auto;
+}
+
+header nav a {
+    font-size: 1.2rem;
+    margin-left: 1em;
+    transition: all 300ms ease-in-out;
+}
+
+header.transparent nav a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+header nav a.active,
+header nav a:hover {
+    color: #a97c50;
+    font-weight: bold;
+}
+
+header.transparent nav a.active,
+header.transparent nav a:hover {
+    color: white;
+}
 
 /* Hero */
 
@@ -36,7 +100,9 @@
 .hero {
     width: 100%;
     height: 100vh;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     background-color: black;
     overflow: hidden;
 }
@@ -66,4 +132,33 @@
 .hero div:nth-child(3) {
     background-image: url('../img/front3.jpg');
     animation-delay: 12s;
+}
+
+.hero .hero-logo {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    animation: none;
+}
+
+@media (max-width: 960px) {
+    .hero .hero-logo {
+        width: 50%;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero .hero-logo {
+        width: 65%;
+    }
+}
+
+@media (max-width: 440px) {
+    .hero .hero-logo {
+        width: 80%;
+    }
 }
