@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
     <header class="transparent">
@@ -24,6 +26,68 @@
         <div class="hero-logo">
             <img src="img/logo-frame.svg" alt="">
         </div>
+        <a href="#after-hero" class="hero-down">
+            <img src="img/down.svg" alt="">
+        </a>
     </div>
+    <div class="row after-hero" >
+        <span id="after-hero">&nbsp;</span>
+        <div class="col-66">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi consequatur quibusdam totam saepe vitae adipisci iusto magnam voluptates necessitatibus ullam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam accusantium optio adipisci ducimus, ut laboriosam!</p>
+        </div>
+        <div class="col-33">
+            <img src="img/thumb4.jpg" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-50">
+            <img src="img/thumb5.jpg" alt="">
+        </div>
+        <div class="col-50">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae maiores laudantium nostrum exercitationem, perferendis amet delectus neque? Fuga nisi totam, consequuntur odio, dolor autem consectetur, ad reiciendis doloribus ab modi.</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-50 nav-box">
+            <img src="img/comprar.svg" alt="">
+            <a href="#">VENTA</a>
+        </div>
+        <div class="col-50 nav-box">
+            <img src="img/alquilar.svg" alt="">
+            <a href="#">ALQUILER</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-25"></div>
+        <div class="col-50">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            <form>
+                <input class="user" type="text" placeholder="Nombre y apellidos">
+                <input class="email" type="email" placeholder="Correo electrónico">
+                <div class="flex j-between">
+                    <div class="flex j-center a-center">
+                        <input type="checkbox" id="legal-check">
+                        <label for="legal-check">Acepto las condiciones legales</label>
+                    </div>
+                    <button>Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-25"></div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            // Transición de la barra superior de navegación
+            $(window).on('scroll', function() {
+                let position = $('#after-hero').offset();
+                if($(window).scrollTop() >= position.top - 80) {
+                    $('header').removeClass('transparent');
+                } else {
+                    $('header').addClass('transparent');
+                }
+            })
+        })
+    </script>
 </body>
 </html>
