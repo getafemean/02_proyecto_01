@@ -13,4 +13,11 @@ $(document).ready(function(){
         $('#burger').toggleClass('open');
         $('aside').toggleClass('open');
     })
+    // Cambio de tamaño del dispositivo
+    $(window).resize(function() {
+        if($('#burger').hasClass('open')) {
+            $('#burger').toggleClass('open');
+            $('aside').toggleClass('open');
+        }
+    })
 })
