@@ -113,17 +113,39 @@ header.transparent nav a:hover {
     height: 2px;
     margin: 6px;
     background-color: #a97c50;
+    transition: 400ms all ease-in;
+}
+
+#burger.open .bar {
+    background-color: white;
+}
+
+#burger.open .bar.top {
+    transform: translateY(8px) rotateZ(45deg);
+}
+
+#burger.open .bar.center {
+    width: 0;
+}
+
+#burger.open .bar.bottom {
+    transform: translateY(-8px) rotateZ(-45deg);
 }
 
 aside {
     position: fixed;
     top: 0;
-    left: 0;
+    left: -360px;
     z-index: 2;
     width: 360px;
     height: 100vh;
     background-color: #424242;
     padding-top: 60px;
+    transition: all 700ms ease-in-out;
+}
+
+aside.open {
+    left: 0;
 }
 
 aside nav {

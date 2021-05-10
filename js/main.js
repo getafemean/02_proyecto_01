@@ -8,4 +8,9 @@ $(document).ready(function(){
             }, 800)
         }
     })
+    // Menu lateral
+    $('#burger').on('click', function() {
+        $('#burger').toggleClass('open');
+        $('aside').toggleClass('open');
+    })
 })
