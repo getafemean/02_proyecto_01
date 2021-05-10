@@ -97,6 +97,68 @@ header.transparent nav a:hover {
     color: white;
 }
 
+/* Menú lateral */
+
+#burger {
+    position: fixed;
+    top: 1.7rem;
+    left: 1rem;
+    z-index: 3;
+    cursor: pointer;
+    display: none
+}
+
+#burger .bar {
+    width: 30px;
+    height: 2px;
+    margin: 6px;
+    background-color: #a97c50;
+}
+
+aside {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 360px;
+    height: 100vh;
+    background-color: #424242;
+    padding-top: 60px;
+}
+
+aside nav {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+aside nav a {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.80);
+    transition: all 300ms ease-in-out;
+    padding: 0.5rem 0;
+}
+
+aside nav a:hover,
+aside nav a.active {
+    font-weight: bold;
+    color: white;
+}
+
+@media (max-width: 640px) {
+    #burger {
+        display: block;
+    }
+
+    header {
+        justify-content: flex-end;
+    }
+
+    header nav {
+        display: none;
+    }
+}
+
 /* Hero */
 
 @keyframes heroAnimation {
@@ -313,6 +375,38 @@ header.transparent nav a:hover {
     align-items: center;
 }
 
+.m-t {
+    margin-top: 1rem;
+}
+
+.m-b {
+    margin-bottom: 1rem;
+}
+
+.m-l {
+    margin-left: 1rem;
+}
+
+.m-r {
+    margin-right: 1rem;
+}
+
+.m-t-small {
+    margin-top: 0.5rem;
+}
+
+.m-b-small {
+    margin-bottom: 0.5rem;
+}
+
+.m-l-small {
+    margin-left: 0.5rem;
+}
+
+.m-r-small {
+    margin-right: 0.5rem;
+}
+
 /* Componentes */
 
 /* Caja de navegación */
@@ -363,6 +457,11 @@ input {
     transition: 400ms all ease-in-out;
 }
 
+input::placeholder {
+    font-size: 0.9rem;
+    font-family: "Avenir", sans-serif;
+}
+
 input:focus {
     outline: none;
     border-bottom: 1.5px solid #7e5328;
@@ -410,4 +509,44 @@ input[type="checkbox"]:checked + label::before {
 
 label {
     font-size: 0.8rem;
+}
+
+/* Footer */
+
+footer {
+    display: flex;
+    padding: 1rem;
+    background-color: #424242;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: white;
+}
+
+footer p:first-child {
+    font-weight: bold;
+    color: #a97c50;
+}
+
+footer img.rrss {
+    height: 48px;
+    width: auto;
+}
+
+footer a {
+    color: rgba(255, 255, 255, 0.8);
+    transition: 300ms all ease-in-out;
+}
+
+footer a:hover {
+    color: white;
+}
+
+@media (max-width: 760px) {
+    
+    footer {
+        flex-direction: column;
+        padding: 1rem 0.5rem;
+    }
 }
