@@ -303,6 +303,13 @@ aside nav a.active {
     margin-top: calc(100vh - 80px) ;
 }
 
+.row.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 360px);
+    grid-gap: 1.5rem;
+    justify-content: center;
+}
+
 #after-hero {
     display: block;
     margin-top: -80px;
@@ -576,5 +583,49 @@ footer a:hover {
 /* Cards */
 
 .card {
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 4px grey;
+    overflow: hidden;
+}
 
+.card .pic-card {
+    height: 300px;
+    width: 360px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 300px;
+}
+
+.card .footer-card {
+    height: 175px;
+    width: 360px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card .footer-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0.3rem;
+}
+
+.card .footer-card p:first-child {
+    font-weight: bold;
+}
+
+.card .footer-card a {
+    font-size: 0.8rem;
+    padding: 0.5em 1em;
+    border-radius: 0.4em;
+    border: 1px solid #a97c50;
+    background-color: #a97c50;
+    color: white;
+    transition: all 400ms ease-in-out;
+    align-self: center;
+}
+
+.card .footer-card a:hover {
+    background-color: #775431;
 }

@@ -35,11 +35,75 @@
             <a href="#">Contacto</a>
         </nav>
     </aside>
-    <div class="row">
+    <div class="row grid">
         <div class="card">
             <div class="pic-card"></div>
             <div class="footer-card">
-                
+                <div>
+                    <p>Villa en Los Altos de Marbella (Urb. Los Pinos)</p>
+                    <p>6.000.000 €</p>
+                </div>
+                <a href="#">Más información</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic-card"></div>
+            <div class="footer-card">
+                <div>
+                    <p>Villa en el Paraiso</p>
+                    <p>4.000.000 €</p>
+                </div>
+                <a href="#">Más información</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic-card"></div>
+            <div class="footer-card">
+                <div>
+                    <p>Finca en Las Lomas</p>
+                    <p>2.000.000 €</p>
+                </div>
+                <a href="#">Más información</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic-card"></div>
+            <div class="footer-card">
+                <div>
+                    <p>Villa en La Colina Verde</p>
+                    <p>6.000.000 €</p>
+                </div>
+                <a href="#">Más información</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic-card"></div>
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Las Lomas</p>
+                    <p>5.000.000 €</p>
+                </div>
+                <a href="#">Más información</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic-card"></div>
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Puerto Banús</p>
+                    <p>4.000.000 €</p>
+                </div>
+                <a href="#">Más información</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="pic-card"></div>
+            <div class="footer-card">
+                <div>
+                    <p>Villa en Las Lomas</p>
+                    <p>5.000.000 €</p>
+                </div>
+                <a href="#">Más información</a>
             </div>
         </div>
     </div>
@@ -79,5 +143,20 @@
             </div>
         </div>
     </footer>
+    <script>
+        let pics = document.querySelectorAll('.pic-card');
+        let picsSrc = [
+            './img/thumb1.jpg',
+            './img/thumb2.jpg',
+            './img/thumb3.jpg',
+            './img/thumb4.jpg',
+            './img/thumb5.jpg',
+            './img/thumb6.jpg',
+            './img/thumb7.jpg',
+        ]
+        for(i=0; i < pics.length; i++) {
+            pics[i].style.backgroundImage = "url('" + picsSrc[i] + "')";
+        }
+    </script>
 </body>
 </html>
