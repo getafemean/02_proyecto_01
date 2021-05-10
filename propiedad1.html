@@ -35,76 +35,55 @@
             <a href="#">Contacto</a>
         </nav>
     </aside>
-    <div class="row grid">
-        <div class="card">
-            <div class="pic-card"></div>
-            <div class="footer-card">
-                <div>
-                    <p>Villa en Los Altos de Marbella (Urb. Los Pinos)</p>
-                    <p>6.000.000 €</p>
-                </div>
-                <a href="propiedad1.html">Más información</a>
+    <div class="row property">
+        <div class="col-50">
+            <h1>Villa en Los Altos de Marbella (Urb. Los Pinos)</h1>
+            <p>
+                <img src="img/blueprint.svg" alt="">
+                950 m2 habitables
+            </p>
+            <p>
+                <img src="img/bed.svg" alt="">
+                7 dormitorios
+            </p>
+            <p>
+                <img src="img/bath.svg" alt="">
+                9 baños
+            </p>
+            <p>
+                <img src="img/tree.svg" alt="">
+                Jardín de 2.500 m<sup>2</sup>
+            </p>
+            <p>
+                <img src="img/money.svg" alt="">
+                6.000.000 €
+            </p>
+            <p>
+                <img src="img/contract.svg" alt="">
+                Entrega inmediata
+            </p>
+            <div class="flex j-end">
+                <button>Ver imágenes</button>
             </div>
         </div>
-        <div class="card">
-            <div class="pic-card"></div>
-            <div class="footer-card">
-                <div>
-                    <p>Villa en el Paraiso</p>
-                    <p>4.000.000 €</p>
-                </div>
-                <a href="#">Más información</a>
-            </div>
+        <div class="col-50"></div>
+    </div>
+    <div class="row">
+        <div class="col-50">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eos!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut maiores quasi facere quisquam, in ducimus!</p>
         </div>
-        <div class="card">
-            <div class="pic-card"></div>
-            <div class="footer-card">
-                <div>
-                    <p>Finca en Las Lomas</p>
-                    <p>2.000.000 €</p>
-                </div>
-                <a href="#">Más información</a>
-            </div>
+        <div class="col-50">
+            <img src="img/property2.jpg" alt="">
         </div>
-        <div class="card">
-            <div class="pic-card"></div>
-            <div class="footer-card">
-                <div>
-                    <p>Villa en La Colina Verde</p>
-                    <p>6.000.000 €</p>
-                </div>
-                <a href="#">Más información</a>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-50">
+            <img src="img/property3.jpg" alt="">
         </div>
-        <div class="card">
-            <div class="pic-card"></div>
-            <div class="footer-card">
-                <div>
-                    <p>Villa en Las Lomas</p>
-                    <p>5.000.000 €</p>
-                </div>
-                <a href="#">Más información</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="pic-card"></div>
-            <div class="footer-card">
-                <div>
-                    <p>Villa en Puerto Banús</p>
-                    <p>4.000.000 €</p>
-                </div>
-                <a href="#">Más información</a>
-            </div>
-        </div>
-        <div class="card">
-            <div class="pic-card"></div>
-            <div class="footer-card">
-                <div>
-                    <p>Villa en Las Lomas</p>
-                    <p>5.000.000 €</p>
-                </div>
-                <a href="#">Más información</a>
-            </div>
+        <div class="col-50">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, eos!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut maiores quasi facere quisquam, in ducimus!</p>
         </div>
     </div>
     <footer>
@@ -143,20 +122,35 @@
             </div>
         </div>
     </footer>
+    <div class="overlay"></div>
+    <div class="carousel">
+        <div class="slide">
+            <img src="img/property1.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/property2.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/property3.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/property4.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/property5.jpg" alt="">
+        </div>
+        <div class="slide">
+            <img src="img/property6.jpg" alt="">
+        </div>
+    </div>
     <script>
-        let pics = document.querySelectorAll('.pic-card');
-        let picsSrc = [
-            './img/thumb1.jpg',
-            './img/thumb2.jpg',
-            './img/thumb3.jpg',
-            './img/thumb4.jpg',
-            './img/thumb5.jpg',
-            './img/thumb6.jpg',
-            './img/thumb7.jpg',
-        ]
-        for(i=0; i < pics.length; i++) {
-            pics[i].style.backgroundImage = "url('" + picsSrc[i] + "')";
+        let carousel = document.querySelectorAll('.carousel')[0];
+        let slides = document.querySelectorAll('.slide');
+
+        for (i=0; i < slides.length; i++) {
+            slides[i].style.left = carousel.offsetWidth * -i + 'px';
         }
+
     </script>
 </body>
 </html>
