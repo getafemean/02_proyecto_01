@@ -670,6 +670,7 @@ footer a:hover {
     width: 100%;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
+    display: none;
 }
 
 .carousel {
@@ -680,6 +681,7 @@ footer a:hover {
     width: 90%;
     z-index: 5;
     overflow: hidden;
+    display: none;
 }
 
 .carousel .slide {
@@ -687,6 +689,9 @@ footer a:hover {
     top: 0;
     left: 0;
     width: 100%;
+}
+
+.carousel .slide.fadein {
     transition: 900ms all ease-in-out;
 }
 
@@ -715,6 +720,7 @@ footer a:hover {
     left: 0.5rem;
     transform: translateY(-50%);
     border-radius: 50%;
+    display: none;
 }
 
 .carousel .btn.right-arrow {
