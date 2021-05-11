@@ -674,12 +674,11 @@ footer a:hover {
 
 .carousel {
     position: fixed;
-    top: 5vh;
-    left: 5%;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 90%;
-    height: 90vh;
     z-index: 5;
-    background-color: white;
     overflow: hidden;
 }
 
@@ -687,4 +686,40 @@ footer a:hover {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    transition: 900ms all ease-in-out;
+}
+
+.carousel .slide .img {
+    width: 100%;
+}
+
+.carousel .btn {
+    position: absolute;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .btn.x-modal {
+    top: 0;
+    right: 0;
+}
+
+.carousel .btn.left-arrow {
+    top: 50%;
+    left: 0.5rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.carousel .btn.right-arrow {
+    top: 50%;
+    right: 0.5rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
 }
